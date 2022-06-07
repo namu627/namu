@@ -1,0 +1,44 @@
+.container {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  font-family: serif;
+}
+
+body {
+  background-color: #001933;
+}
+
+p,
+h3 {
+  color: black;
+  font-size: large;
+  font-weight:900;
+}
+
+.container h1 {
+  color: green;
+  margin-bottom: 5rem;
+  font-family: serif;
+  font-size: 3rem;
+}
+
+#btn {
+  margin-top: 2rem;
+  transition-duration: 2.5s;
+  font-family: serif;
+  background-color: #00ffff;
+}
+
+#btn:hover {
+  background-color: yellow;
+}
+
+.dicebox {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 30px;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}

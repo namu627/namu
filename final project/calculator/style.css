@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    background-color: gray;
+}
+
+.box {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    margin: auto;
+    width: 55%;
+    height: 350px;
+}
+
+.btnbox {
+    margin-top: 4rem;
+}

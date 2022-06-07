@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>근의공식계산기</title>
+</head>
+
+<body>
+    <h1>근의공식 계산기</h1>
+    <div class="box">
+        <form name="form">
+            <h3>ax^2+bx+c=0의 형태에서 각 값을 입력해주세요</h3>
+            <label for="a">a값</label><input id="a" /><br />
+            <label for="b">b값</label><input id="b" /><br />
+            <label for="c">c값</label><input id="c" /><br />
+            <input type="button" value="계산하기" onclick="cal();" style="margin-top: 2rem; margin-bottom: 2rem;"/><br>
+            <label for="ans1">첫번째 근</label><input id="ans1" /><br />
+            <label for="ans2">두번째 근</label><input id="ans2" /><br />
+        </form>
+
+        <div class="btnbox">
+            <button type="button" id="btn">초기화하기</button>
+          </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
