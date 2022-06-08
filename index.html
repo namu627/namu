@@ -7,6 +7,481 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1,maximum-scale=1" />
   <link rel="stylesheet" href="style.css" />
   <title>namu Portfolio</title>
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  padding-top: 70px;
+}
+
+main {
+  padding: 1rem;
+  height: 100%;
+}
+
+.bar {
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 60px;
+  background-color: whitesmoke;
+  position: fixed;
+  border-radius: 2px;
+  opacity: 0.97;
+  align-items: center;
+  box-shadow: 0px 4px 2px lightgrey;
+  z-index: 10;
+}
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+}
+
+.logo h3 {
+  margin-left: 20%;
+  text-align: center;
+  line-height: 10%;
+}
+
+.logo {
+  margin-right: 15px;
+}
+
+.logo img {
+  height: 75px;
+}
+
+.webtitle .redtext {
+  color: #c10040;
+}
+
+.bar div {
+  flex: 1 1 40%;
+}
+
+.bar h3 {
+  text-align: center;
+  display: inline;
+  color: black;
+  text-shadow: 3px 3px 3px gray;
+}
+
+.bar_menu {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.shortcut:after,
+.shortcut:before {
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all .28s ease-in-out;
+  transition: all .28s ease-in-out;
+  width: 0;
+}
+
+.shortcut:hover:after,
+.shortcut:hover:before {
+  border-color: black;
+  box-shadow: 3px 3px 3px gray;
+  -webkit-transition: width 350ms ease-in-out;
+  transition: width 350ms ease-in-out;
+  width: 100%;
+}
+
+.shortcut:hover:before {
+  bottom: auto;
+  top: 0;
+}
+
+.item {
+  flex: 1 1 30%;
+}
+
+.profile {
+  width: 100%;
+  height: 800px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("img/profile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sitename {
+  text-align: center;
+  margin: auto;
+  width: 850px;
+  height: auto;
+  margin-top: 15%;
+  border-radius: 20px;
+  backdrop-filter: blur(7px);
+  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sitename h1 {
+  font-size: 300%;
+  color: white;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip img {
+  width: 50px;
+  margin-right: 1rem;
+  margin-top: 1rem;
+
+  border-radius: 50%;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 11;
+  bottom: 110%;
+  left: 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -100px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.aboutme {
+  background-color: green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.aboutmeleft {
+
+  width: 45%;
+}
+
+.myphoto {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.mymoto {
+  margin: auto;
+  background-color: white;
+  color: black;
+  vertical-align: bottom;
+  text-align: center;
+  margin-top: 3rem;
+  height: 100px;
+  width: 50%;
+  border-radius: 20px;
+}
+
+.myinfo {
+  width: 30%;
+  display: block;
+}
+
+.myinfo h3 {
+  vertical-align: top;
+  margin-left: 3rem;
+}
+
+.myphoto img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.myinfo img {
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  padding-bottom: 2rem;
+}
+
+.aboutme h3 {
+  display: inline;
+  color: white;
+  text-align: center;
+}
+
+
+.skills {
+  background-color: burlywood;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.skillicon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.item {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.level {
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgb(126, 108, 86);
+}
+
+.skillicon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: all.5s ease;
+  transition: all.5s ease;
+  bottom: 0px;
+  overflow: hidden;
+  background-color: burlywood;
+}
+
+.progressbar {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  background: #F2CB61;
+  position: absolute;
+  bottom: 0px;
+  margin: auto;
+}
+
+.level:hover .skillicon {
+  bottom: 50px;
+}
+
+.progress_bar {
+  height: 20px;
+  width: 95%;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 115px;
+}
+
+.skills h2 {
+  color: white;
+  text-shadow: 5px 5px 5px black;
+}
+
+
+.project {
+  background-color: chocolate;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.projectbox {
+  background-color: white;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px brown;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+
+}
+
+.projectbox h1 {
+  padding-top: 2rem;
+  font-weight: 1000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.projectinfo {
+  margin-top: 3rem;
+  top: 0;
+  display: flex;
+  height: 85%;
+}
+
+.projectimg {
+  width: 40%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 3px solid whitesmoke;
+  bottom: 0px;
+}
+
+.image_thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projecttext {
+  width: 42%;
+  height: auto;
+
+  border-radius: 5px;
+  margin: auto;
+  text-align: left;
+}
+
+.projecttext h3 {
+  font-weight: 500;
+}
+
+.career {
+  background-color: brown;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.career h1 {
+  text-align: center;
+}
+
+.careerbox {
+  background-color: rgb(255, 255, 176);
+  width: 60%;
+  height: auto;
+  text-align: center;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: inset 5px 5px 5px #333;
+
+}
+
+.cbox {
+  margin: auto;
+  top: 0;
+  display: flex;
+  height: 99%;
+}
+
+.companyinfo {
+  width: 33%;
+  height: 90%;
+  margin: auto;
+}
+
+.companyimg {
+
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 20%;
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+
+.careerinfo {
+  width: 55%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 30px;
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.careerinfo h2 {
+  color: black;
+}
+
+.careerinfo h4 {
+  font-weight: 400;
+}
+
+footer {
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.snsbox {
+  margin: auto;
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+  padding-top: 5rem;
+}
+
+footer img {
+  width: 50px;
+  height: 50px;
+}
+
+.subhead {
+  display: flex;
+}
+
+.subhead h1 {
+  color: white;
+}
+  </style>
 </head>
 
 <body>
