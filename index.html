@@ -8,8 +8,15 @@
   <link rel="stylesheet" href="style.css" />
   <title>namu Portfolio</title>
   <style>
-    html {
+    @font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
   scroll-behavior: smooth;
+  font-family: 'GmarketSansMedium';
 }
 
 a {
@@ -62,7 +69,9 @@ main {
 .logo img {
   height: 75px;
 }
-
+.webtitle {
+  margin-top: 13px;
+}
 .webtitle .redtext {
   color: #c10040;
 }
@@ -131,7 +140,7 @@ main {
 .sitename {
   text-align: center;
   margin: auto;
-  width: 850px;
+  width: 600px;
   height: auto;
   margin-top: 15%;
   border-radius: 20px;
@@ -140,7 +149,7 @@ main {
 }
 
 .sitename h1 {
-  font-size: 300%;
+  font-size: 400%;
   color: white;
 }
 
@@ -215,12 +224,17 @@ main {
   margin: auto;
   background-color: white;
   color: black;
-  vertical-align: bottom;
   text-align: center;
-  margin-top: 3rem;
-  height: 100px;
+  padding-top: 1px;
+  margin-top: 1rem;
+  height: auto;
   width: 50%;
   border-radius: 20px;
+}
+
+.mymoto h2{
+  color: black;
+
 }
 
 .myinfo {
@@ -350,7 +364,6 @@ main {
 .projectbox h1 {
   padding-top: 2rem;
   font-weight: 1000;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .projectinfo {
@@ -523,8 +536,7 @@ footer img {
 
       <div class="sitename">
         <h1>
-          안녕하세요.<br>
-          남유찬 포트폴리오 웹사이트 입니다.
+          NamYuChan's<br>Portfolio
         </h1>
       </div>
 
@@ -547,10 +559,10 @@ footer img {
         <div class="myphoto"><img src="img/남유찬1.jpg" alt="남유찬 사진">
         </div>
         <div class="mymoto">
-          <h2 style="color: black; margin-top: 3px;">
+          <h2>
             "꾸준하고 꼼꼼하게."
           </h2>
-          <h3 style="color: black; margin-top: 3px;">이것이 저의 장점이자 모토입니다</h3>
+          <h3 style="color: black; margin-top: 3px;">이것이 저의 장점이자 모토입니다<br><br></h3>
         </div>
       </div>
 
@@ -800,7 +812,7 @@ footer img {
               사이트 로고를 직접 제작하였고, 전에 만들었던 텍스트 기반 웹페이지를 토대로 테마와 내용을 최대한 유지하면서 생각나는 기능을 추가했습니다.<br>
               사진이라던지 세부 요소배치 등 디자인적인 부분에서 고민을 많이 했던 것 같습니다.<br>
               사용할 수 있는 기술들을 모두 활용하여 원하는걸 표현하려고 과정에서 웹 프로그래밍에 한층 더 익숙해졌습니다.<br>
-              github를 통해 웹사이트를 퍼블리싱하였습니다.
+              <a href="https://namu627.github.io/namu/" target="_blank">GitHub</a>를 통해 웹사이트를 퍼블리싱하였습니다.
             </h3>
           </div>
         </div>
